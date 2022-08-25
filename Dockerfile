@@ -1,6 +1,7 @@
 # Pull base image 
-From tomcat:8-jre8 
+FROM tomcat:lastest
 
 # Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
+LABEL mainteiner="fusisoft@gmail.com"  
+RUN cp -R /urs/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
 COPY ./webapp.war /usr/local/tomcat/webapps
